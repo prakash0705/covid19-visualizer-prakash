@@ -1,0 +1,1 @@
+Netlify url: https://covid19-visualizer-prakash.netlify.app/
