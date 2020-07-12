@@ -1,0 +1,28 @@
+<div class="row" style="background-color: skyblue; padding-bottom: 20px; padding-top: 20px;">
+    <div class="col-lg-8" style="display: inline;">
+        <div class="container leftbox">
+            <h3 style="text-align: left; padding-left: 30px;">Welcome to Covid19 Demo site</h3>
+        </div>
+    </div>
+    
+    <div class="col-lg-2">
+        <div class="container rightbox">
+
+            <button type="submit" class="btn btn-success" id="logout" style="align-items: center;"
+                *ngIf="this.isButtonVisible" routerLink="dashboard">Home</button>
+        </div>
+
+    </div>
+    <div class="col-lg-2">
+        <div class="container rightbox">
+
+            <button type="submit" class="btn btn-primary" id="logout" style="align-items: center;"
+                *ngIf="this.isButtonVisible" (click)=logout()>Log out</button>
+        </div>
+
+    </div>
+
+
+
+
+</div>

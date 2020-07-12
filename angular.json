@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Covid19India"
+    }
+  },
+  "defaultProject": "Covid19India",
+  "cli": {
+    "analytics": "ec1ea6fe-8909-4dd2-b044-f010e9647de4"
+  }
 }

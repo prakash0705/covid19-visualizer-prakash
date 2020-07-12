@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="container rightbox">
+            <br>
+            <table class="table" *ngFor="let value of TimeSeries">
+                <tr  *ngFor="let list of value">
+                    <td *ngIf="list.statecode==TT" class="circle1"><b>Confirmed: </b>{{list.confirmed |number}}</td>
+                    <td *ngIf="list.statecode==TT" class="circle2"><b>Active: </b>{{list.active |number}}</td>
+                    
+                    <td *ngIf="list.statecode==TT" class="circle3"><b>Recovered: </b>{{list.recovered |number}}</td>
+                    <td *ngIf="list.statecode==TT" class="circle4"><b>Death: </b>{{list.deaths |number}}</td>
+                </tr>
+                <tr *ngFor="let list of value">
+                    <td *ngIf="list.statecode==TT" colspan="4" style="text-align: center;">Last Update: {{list.lastupdatedtime}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="col-lg-12">
+            <table class="table">
+                <tr style="text-align: center;">
+                    <td>
+                        <a routerLink="state" style="font-size: 30px;">StateWise Data</a>
+                    </td>
+                    <td>
+                        <a routerLink="state" style="font-size: 30px;">District Wise Date</a>
+                    </td>
+                    <hr>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="chart-wrapper" style="width:1000px; height:100px" >
+    <canvas baseChart style="padding-left: 250px; padding-bottom: 130px;"
+    [data]="pieChartData" 
+    [labels]="pieChartLabels" 
+    [chartType]="pieChartType"
+    [colors]="chartColors"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>
+<div class="footer">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p class="copyright text-muted" style="text-align:center;">Copyright © Your Website 2020</p>
+</div>
