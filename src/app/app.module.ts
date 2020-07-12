@@ -14,7 +14,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ChartsModule } from 'ng2-charts';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     StatewisedataComponent,
     DistrictwiseComponent,
     DashboardComponent,
-    NavBarComponent,
-    FooterComponent
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
