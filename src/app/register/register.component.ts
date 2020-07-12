@@ -25,13 +25,15 @@ export class RegisterComponent implements OnInit {
       console.log({email:(document.getElementById("email")as HTMLInputElement).value,password:(document.getElementById("password")as HTMLInputElement).value})
       this.productService.PostRegister(this.postResult.value).subscribe( 
        (data)=>{
-        this.toastr.success('Account Created Successfully');
+        this.toastr.success('Account Created Successfully','Welcome',{
+          positionClass: 'toast-center-center'} );
+        
        this.productService.PostLogin({email:(document.getElementById("email")as HTMLInputElement).value,password:(document.getElementById("password")as HTMLInputElement).value}).subscribe((data)=>{
         window.localStorage.setItem("token",JSON.stringify({data}));
        if(window.localStorage.getItem("token")!=null)
        {
         console.log("success");
-       window.location.href="dashboard";
+       window.location.href="/dashboard";
        }
       })
     })

@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm;
   value=[];
   token;
+  
   constructor(private productService:ProductService,private fb: FormBuilder,private router:ActivatedRoute,private toastr: ToastrService) { 
     this.loginForm=this.fb.group({
       email:this.fb.control("",[Validators.required,Validators.email]),
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
     {
     this.productService.PostLogin(this.loginForm.value).subscribe((data)=>{
       window.localStorage.setItem("token",JSON.stringify({data}));
-      this.toastr.success('Login Success');
+      this.toastr.success('Login Success','Welcome',{
+        positionClass: 'toast-center-center'} );
           console.log(window.localStorage.getItem("token")!=null) 
           if(window.localStorage.getItem("token")!=null)
           {
