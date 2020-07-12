@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
        if(window.localStorage.getItem("token")!=null)
        {
         console.log("success");
-       window.location.href="https://covid19-visualizer-prakash.netlify.app/dashboard";
+       window.location.href="";
        }
       })
     })
