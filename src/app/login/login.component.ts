@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           {
             console.log("refer")
             
-            window.location.href="https://covid19-visualizer-prakash.netlify.app//dashboard";
+            window.location.href="https://covid19-visualizer-prakash.netlify.app/dashboard";
           }
         })
       }
